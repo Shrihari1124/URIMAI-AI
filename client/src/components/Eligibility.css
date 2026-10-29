@@ -1,0 +1,172 @@
+
+.eligibility-page {
+  min-height: 100vh;
+  padding: 36px 24px 56px;
+  background: #f1e4cc;
+  color: #35131f;
+}
+
+.eligibility-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 0;
+  background: transparent;
+  color: #701f37;
+  cursor: pointer;
+  font: inherit;
+}
+
+.eligibility-page > h1 {
+  max-width: 700px;
+  margin: 20px auto 12px;
+  text-align: center;
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+}
+
+.eligibility-page > h1 span {
+  color: #701f37;
+}
+
+.eligibility-eyebrow,
+.eligibility-description,
+.eligibility-step,
+.eligibility-disclaimer {
+  text-align: center;
+}
+
+.eligibility-eyebrow {
+  margin-top: 42px;
+  color: #701f37;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+}
+
+.eligibility-description {
+  max-width: 580px;
+  margin: 0 auto 28px;
+  line-height: 1.7;
+}
+
+.eligibility-progress {
+  max-width: 620px;
+  height: 6px;
+  margin: 0 auto 12px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #ddcbb0;
+}
+
+.eligibility-progress > div {
+  height: 100%;
+  border-radius: inherit;
+  background: #701f37;
+  transition: width 0.25s ease;
+}
+
+.eligibility-step {
+  color: #765b4b;
+  font-size: 0.9rem;
+}
+
+.eligibility-card {
+  max-width: 620px;
+  margin: 24px auto;
+  padding: clamp(22px, 5vw, 36px);
+  border: 1px solid #e0ceb0;
+  border-radius: 20px;
+  background: #fff7e9;
+  box-shadow: 0 12px 36px rgb(53 19 31 / 7%);
+}
+
+.eligibility-card h2 {
+  margin: 0 0 24px;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+.eligibility-options {
+  display: grid;
+  gap: 12px;
+}
+
+.eligibility-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 16px;
+  border: 1px solid #ddcbb0;
+  border-radius: 12px;
+  background: transparent;
+  color: #35131f;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+}
+
+.eligibility-option.selected {
+  border-color: #701f37;
+  background: #f5e7e0;
+}
+
+.eligibility-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.eligibility-primary,
+.eligibility-secondary {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: 1px solid #701f37;
+  border-radius: 28px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.eligibility-primary {
+  background: #701f37;
+  color: #fff7e9;
+}
+
+.eligibility-secondary {
+  background: transparent;
+  color: #701f37;
+}
+
+.eligibility-primary:disabled,
+.eligibility-secondary:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.eligibility-disclaimer {
+  max-width: 620px;
+  margin: 24px auto 0;
+  color: #765b4b;
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 480px) {
+  .eligibility-page {
+    padding: 24px 16px 40px;
+  }
+
+  .eligibility-actions > button {
+    padding: 11px 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .eligibility-progress > div {
+    transition: none;
+  }
+}
