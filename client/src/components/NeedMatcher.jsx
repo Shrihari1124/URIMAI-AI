@@ -237,7 +237,7 @@ export default function NeedMatcher({ onBack, onAssessmentSaved }) {
       const token = localStorage.getItem('token')
       const userNeed = need.trim() || `Eligibility check for ${matches.map((item) => item.name).join(', ')}`
 
-      const response = await fetch('http://localhost:5000/api/assessments', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/assessments`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

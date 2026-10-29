@@ -161,7 +161,7 @@ const goToScreen = (nextScreen) => {
     const password = form.elements.password.value
 
     try {
-      const response = await fetch('http://localhost:5000/api/auth/login', {
+      const response = awaitfetch(`${import.meta.env.VITE_API_URL}/api/auth/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -208,7 +208,7 @@ setFormMessage(`Welcome back, ${data.user.name}!`)
 
     try {
       const response = await fetch(
-        'http://localhost:5000/api/auth/register',
+        `${import.meta.env.VITE_API_URL}/api/auth/register`,
         {
           method: 'POST',
           headers: {
